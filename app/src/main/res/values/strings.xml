@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tiend@pp</string>
+    <string name="bienvenidaApp">¡BIENVENIDO!</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="administrador">Administrador</string>
+    <string name="cliente">Cliente</string>
+    <string name="userName">Nombre usuario</string>
+    <string name="password">password</string>
+    <string name="actionLogin">Ingresar</string>
+</resources>
