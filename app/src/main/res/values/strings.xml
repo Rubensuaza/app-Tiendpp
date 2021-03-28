@@ -16,4 +16,6 @@
     <string name="userName">Nombre usuario</string>
     <string name="password">password</string>
     <string name="actionLogin">Ingresar</string>
+    <string name="disculpa">Lo sentimos...</string>
+    <string name="mantenimiento">módulo en mantenimiento</string>
 </resources>
