@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/icono"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tiendpp">
-        <activity android:name=".administrador.creditos.menu.SolicitudesCredito"></activity>
+        <activity android:name=".administrador.creditos.menu.AbonosActivity"></activity>
+        <activity android:name=".administrador.creditos.menu.CreditosActivosActivity" />
+        <activity android:name=".administrador.creditos.menu.FormularioSolicitudActivity" />
+        <activity android:name=".administrador.creditos.menu.SolicitudesCredito" />
         <activity android:name=".administrador.creditos.CreditosActivity" />
         <activity android:name=".administrador.MantenimientoActivity" />
         <activity android:name=".administrador.AdministradorActivity" />

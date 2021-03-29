@@ -1,9 +1,9 @@
 package co.edu.tiendpp.administrador.creditos.menu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +19,8 @@ public class SolicitudesCredito extends AppCompatActivity {
     ListView solicitudesCredito;
     private SolicitudCreditoAdapter solicitudCreditoAdapter;
 
-    String[] solicitud1={"123","Ruben Suaza","21/03/2021"};
-    String[] solicitud2={"124","Tobias Bedoya","18/03/2021"};
+    String[] solicitud1={"123","Ruben Suaza","21/03/2021","Carrera 60A # 52-33","rubesuaza1983@gmail.com","Rioengro","Antioquia","3158703013"};
+    String[] solicitud2={"124","Tobias Bedoya","18/03/2021","Carrera 62A # 54-55","tobiasbedoya2002@gmail.com","Rioengro","Antioquia","3218617925"};
     private List<String[]> solicitudes;
 
 
