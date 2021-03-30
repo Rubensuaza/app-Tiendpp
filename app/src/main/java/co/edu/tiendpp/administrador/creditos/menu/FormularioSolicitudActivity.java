@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.edu.tiendpp.R;
+import co.edu.tiendpp.util.ActionBarUtil;
 
 public class FormularioSolicitudActivity extends AppCompatActivity {
 
@@ -46,6 +47,7 @@ public class FormularioSolicitudActivity extends AppCompatActivity {
         ciudad.setText(solicitud[5]);
         departamento.setText(solicitud[6]);
         fechaSolicitud.setText(solicitud[2]);
+        ActionBarUtil.getInstance(this, true).setToolBar("Solicitudes de crédito", "Datos del solicitante");
 
 
     }
@@ -57,4 +59,11 @@ public class FormularioSolicitudActivity extends AppCompatActivity {
     public void rechazarCredito(View view) {
         Toast.makeText(getApplicationContext(),"Credito rechazado",Toast.LENGTH_LONG).show();
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 }

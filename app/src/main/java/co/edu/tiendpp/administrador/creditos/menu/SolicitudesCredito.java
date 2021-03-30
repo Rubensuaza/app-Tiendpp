@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.edu.tiendpp.R;
 import co.edu.tiendpp.adapter.SolicitudCreditoAdapter;
+import co.edu.tiendpp.util.ActionBarUtil;
 
 public class SolicitudesCredito extends AppCompatActivity {
 
@@ -36,11 +37,18 @@ public class SolicitudesCredito extends AppCompatActivity {
         solicitudes.add(solicitud2);
 
         loadInformation();
+        ActionBarUtil.getInstance(this, true).setToolBar("Menu Créditos", "Solicitudes de crédito");
     }
 
     private void loadInformation(){
         solicitudCreditoAdapter=new SolicitudCreditoAdapter(this,solicitudes);
         solicitudesCredito.setAdapter(solicitudCreditoAdapter);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

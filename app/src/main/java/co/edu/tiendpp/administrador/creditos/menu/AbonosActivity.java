@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.edu.tiendpp.R;
+import co.edu.tiendpp.util.ActionBarUtil;
 
 public class AbonosActivity extends AppCompatActivity {
 
@@ -43,6 +44,13 @@ public class AbonosActivity extends AppCompatActivity {
         direccion.setText(credito[3]);
         valorDeuda.setText(credito[5]);
         fechaPago.setText(credito[6]);
+        ActionBarUtil.getInstance(this, true).setToolBar("Créditos activos", "Detalle del crédito");
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

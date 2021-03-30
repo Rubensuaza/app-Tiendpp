@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.edu.tiendpp.R;
 import co.edu.tiendpp.adapter.CreditoActivoAdapter;
+import co.edu.tiendpp.util.ActionBarUtil;
 
 public class CreditosActivosActivity extends AppCompatActivity {
 
@@ -33,10 +34,17 @@ public class CreditosActivosActivity extends AppCompatActivity {
         creditos.add(credito2);
 
         loadInformation();
+        ActionBarUtil.getInstance(this, true).setToolBar("Menu Créditos", "Créditos activos");
     }
 
     private void loadInformation(){
         creditoActivoAdapter=new CreditoActivoAdapter(this,creditos);
         creditosActivos.setAdapter(creditoActivoAdapter);
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 }
