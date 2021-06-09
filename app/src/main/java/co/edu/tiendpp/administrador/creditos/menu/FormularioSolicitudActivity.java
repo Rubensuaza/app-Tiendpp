@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.edu.tiendpp.R;
+import co.edu.tiendpp.dto.CreditoDTO;
 import co.edu.tiendpp.util.ActionBarUtil;
 
 public class FormularioSolicitudActivity extends AppCompatActivity {
@@ -24,29 +25,23 @@ public class FormularioSolicitudActivity extends AppCompatActivity {
     TextView correo;
     @BindView(R.id.txtDireccion)
     TextView direccion;
-    @BindView(R.id.txtCiudad)
-    TextView ciudad;
-    @BindView(R.id.txtDepartamento)
-    TextView departamento;
     @BindView(R.id.txtFechaSolicitud)
     TextView fechaSolicitud;
+    private CreditoDTO solicitud;
 
-    private String[] solicitud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_solicitud);
         ButterKnife.bind(this);
-        solicitud=getIntent().getStringArrayExtra("solicitud");
-        idCredito.setText(solicitud[0]);
-        nombre.setText(solicitud[1]);
-        telefono.setText(solicitud[7]);
-        correo.setText(solicitud[4]);
-        direccion.setText(solicitud[3]);
-        ciudad.setText(solicitud[5]);
-        departamento.setText(solicitud[6]);
-        fechaSolicitud.setText(solicitud[2]);
+        solicitud= (CreditoDTO) getIntent().getSerializableExtra("solicitud");
+        idCredito.setText(solicitud.getIdCredito());
+        nombre.setText(solicitud.getNombreUsuario()+" "+solicitud.getApellidoUsuaro());
+        telefono.setText(solicitud.getTelefono());
+        correo.setText(solicitud.getCorreo());
+        direccion.setText(solicitud.getDireccion());
+        fechaSolicitud.setText(solicitud.getFechaSolcitud().toString());
         ActionBarUtil.getInstance(this, true).setToolBar("Solicitudes de crédito", "Datos del solicitante");
 
 
